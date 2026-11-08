@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halte — coffee stop</title>
+<meta name="description" content="Halte is a neighbourhood coffee stop: specialty espresso, fresh bakery and brunch. Order ahead for pick-up.">
+<meta name="theme-color" content="#1E3A2F">
+<meta property="og:title" content="Halte — coffee stop">
+<meta property="og:description" content="Specialty espresso, fresh bakery and brunch. Order ahead for pick-up.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="#top" aria-label="Halte, home">
+      <svg aria-hidden="true" width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" class="fill-accent"/><path d="M9 14h13v4a6.5 6.5 0 0 1-13 0z" class="fill-ground"/><path d="M22 15.5h1.8a2.6 2.6 0 0 1 0 5.2H22" fill="none" class="stroke-ground" stroke-width="2"/><path d="M8 26h16" class="stroke-ground" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Halte</span>
+    </a>
+    <nav aria-label="Main" class="main-nav">
+      <a href="#menu" data-i18n="navMenu">Menu</a>
+      <a href="#order" data-i18n="navOrder">Order ahead</a>
+      <a href="#visit" data-i18n="navVisit">Visit</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" data-i18n-aria="langLabel" aria-label="Language" id="lang-switch"></div>
+      <a href="#order" class="basket-btn lift">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span data-i18n="basket">Order</span>
+        <span class="count-badge" data-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section id="top" class="hero">
+  <div class="wrap hero-row">
+    <div class="hero-copy">
+      <p class="kicker"><span class="dot" id="hero-dot"></span><span id="hero-kicker">&nbsp;</span></p>
+      <h1 data-i18n="heroTitle">Slow coffee for fast mornings.</h1>
+      <p class="hero-sub" data-i18n="heroSub"></p>
+      <div class="cta-row">
+        <a href="#menu" class="btn btn-accent lift"><span data-i18n="ctaMenu">See the menu</span>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a href="#order" class="btn btn-ghost lift" data-i18n="ctaOrder">Order ahead</a>
+      </div>
+    </div>
+    <div class="hero-art" id="hero-art">
+      <svg role="img" aria-label="Illustration of a steaming cup of coffee" viewBox="0 0 520 520" class="cup">
+        <circle cx="260" cy="270" r="230" class="fill-accent"/>
+        <path class="steam" d="M210 190c-22-28 22-46 0-78"/>
+        <path class="steam s2" d="M262 182c-22-28 22-46 0-78"/>
+        <path class="steam s3" d="M314 190c-22-28 22-46 0-78"/>
+        <ellipse cx="260" cy="404" rx="186" ry="30" fill="#F7F5F0" class="stroke-ground" stroke-width="6"/>
+        <path d="M372 252h14a42 42 0 0 1 0 84h-26" fill="none" class="stroke-ground" stroke-width="12" stroke-linecap="round"/>
+        <path d="M148 230h224v64a112 112 0 0 1-224 0z" fill="#F7F5F0" class="stroke-ground" stroke-width="6" stroke-linejoin="round"/>
+        <ellipse cx="260" cy="230" rx="112" ry="20" fill="#6B4226" class="stroke-ground" stroke-width="6"/>
+        <path d="M260 240c-14-10-22-14-22-20a7 7 0 0 1 22-2 7 7 0 0 1 22 2c0 6-8 10-22 20z" fill="#E9D7BF"/>
+        <path d="M190 300h140" class="stroke-accent" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+      <svg aria-hidden="true" class="badge spin" viewBox="0 0 200 200">
+        <defs><path id="badgePath" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+        <circle cx="100" cy="100" r="96" fill="#F7F5F0" class="stroke-ground" stroke-width="4"/>
+        <text class="badge-text"><textPath href="#badgePath">KAFFEE · CAFÉ · CAFFÈ · COFFEE ·</textPath></text>
+        <circle cx="100" cy="100" r="16" class="fill-ground"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mq" id="marquee"></div></div>
+
+<section id="menu" class="section">
+  <div class="wrap stack-40">
+    <div class="section-head">
+      <div class="stack-12">
+        <h2 data-i18n="menuTitle">Today’s menu</h2>
+        <p class="muted" data-i18n="menuSub"></p>
+      </div>
+      <div class="chips" role="group" data-i18n-aria="dietLabel" aria-label="Dietary filters" id="diet-chips">
+        <button type="button" class="chip" data-diet="vegan" aria-pressed="false"><span class="box" aria-hidden="true"></span><span data-i18n="vegan">Vegan</span></button>
+        <button type="button" class="chip" data-diet="gf" aria-pressed="false"><span class="box" aria-hidden="true"></span><span data-i18n="gf">Gluten-free</span></button>
+      </div>
+    </div>
+
+    <div class="menu-row">
+      <div class="menu-col">
+        <div class="tabs" role="group" data-i18n-aria="catLabel" aria-label="Menu categories" id="cat-tabs"></div>
+        <div class="grid" id="menu-grid" aria-live="polite"></div>
+        <p class="empty-note" id="menu-empty" hidden data-i18n="empty"></p>
+      </div>
+
+      <aside id="order" class="order-panel" aria-labelledby="order-title">
+        <div class="order-head">
+          <h2 id="order-title" data-i18n="orderTitle">Your order</h2>
+          <span class="count-pill" data-count>0</span>
+        </div>
+
+        <div id="order-done" class="order-done" hidden aria-live="polite">
+          <span class="check"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3 data-i18n="placedTitle">Order received</h3>
+          <p class="soft" data-i18n="placedBody"></p>
+          <span class="code" id="done-code"></span>
+          <p id="done-meta"></p>
+          <button type="button" class="btn-outline-light" id="new-order" data-i18n="newOrder">Start a new order</button>
+        </div>
+
+        <form id="order-form" class="order-form" novalidate>
+          <p class="empty-note small" id="cart-empty" data-i18n="orderEmpty"></p>
+          <ul class="lines" id="cart-lines"></ul>
+
+          <fieldset class="slots-field">
+            <legend class="field-label"><span data-i18n="pickup">Pick-up time</span> · <span id="slot-day"></span></legend>
+            <div class="slots" id="slots"></div>
+          </fieldset>
+
+          <div class="field">
+            <label class="field-label" for="order-name" data-i18n="nameLabel">Name for the order</label>
+            <input id="order-name" name="name" type="text" autocomplete="given-name" maxlength="40" aria-describedby="form-error">
+          </div>
+
+          <div class="total-row">
+            <div class="stack-2"><span class="strong" data-i18n="total">Total</span><span class="muted small" data-i18n="vatNote">incl. VAT</span></div>
+            <span class="total" id="cart-total">€0.00</span>
+          </div>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <button type="submit" class="btn btn-ground lift" data-i18n="place">Place order</button>
+        </form>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section bordered">
+  <div class="wrap stack-40">
+    <div class="section-head">
+      <h2 data-i18n="visitTitle">Visit us</h2>
+      <span class="status-pill"><span class="dot" id="visit-dot"></span><span id="visit-status"></span></span>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3 data-i18n="hoursTitle">Opening hours</h3>
+        <ul class="hours" id="hours"></ul>
+      </div>
+      <div class="card reveal">
+        <h3 data-i18n="addressTitle">Address</h3>
+        <address>[STREET AND NUMBER]<br>[POSTCODE] [CITY]<br>[COUNTRY]</address>
+        <p class="muted">[PHONE]<br>[EMAIL]</p>
+        <p class="note" data-i18n="access"></p>
+      </div>
+      <div class="map reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="300" fill="#DDE6DC"/>
+          <path d="M-20 210C80 170 140 260 240 220S380 150 430 170" fill="none" stroke="#B9D3DE" stroke-width="26"/>
+          <path d="M-10 80H410M-10 150H410M60 -10V310M170 -10V310M300 -10V310" stroke="#fff" stroke-width="10"/>
+          <path d="M-10 -10L410 310" stroke="#fff" stroke-width="16"/>
+          <rect x="190" y="92" width="96" height="44" rx="6" fill="#C9D9C4"/>
+          <rect x="74" y="164" width="82" height="40" rx="6" fill="#C9D9C4"/>
+        </svg>
+        <div class="pin"><span>Halte</span>
+          <svg width="34" height="44" viewBox="0 0 34 44"><path d="M17 43S2 26 2 16a15 15 0 0 1 30 0c0 10-15 27-15 27z" class="fill-accent stroke-ground" stroke-width="3"/><circle cx="17" cy="16" r="5" class="fill-ground"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="stack-14">
+      <span class="footer-logo">Halte</span>
+      <p class="soft small" data-i18n="legal"></p>
+    </div>
+    <nav aria-label="Legal" class="legal-nav">
+      <a href="legal.html#imprint" data-i18n="imprint">Imprint</a>
+      <a href="legal.html#privacy" data-i18n="privacy">Privacy</a>
+      <a href="#menu" data-i18n="allergens">Allergen info</a>
+      <button type="button" class="link-btn" id="open-cookies" data-i18n="cookieManage">Cookie settings</button>
+    </nav>
+  </div>
+  <div class="wrap footer-base">© <span id="year">2026</span> Halte · [COMPANY LEGAL NAME] · [VAT ID]</div>
+</footer>
+
+<a href="#order" class="mobile-bar" id="mobile-bar" hidden>
+  <span><span data-i18n="viewOrder">View order</span> · <span data-count>0</span></span>
+  <span class="strong" id="mobile-total"></span>
+</a>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="cookie" id="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-body" hidden>
+  <div class="cookie-head">
+    <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" class="stroke-ground" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.5A9 9 0 1 1 11.5 3a3 3 0 0 0 3.5 3.5 3 3 0 0 0 3 3 3 3 0 0 0 3 3z"/><circle cx="8.5" cy="11" r="1"/><circle cx="12" cy="16" r="1"/><circle cx="15.5" cy="13" r="1"/></svg>
+    <h2 id="cookie-title" data-i18n="cookieTitle">We value your privacy</h2>
+  </div>
+  <p id="cookie-body" data-i18n="cookieBody"></p>
+  <div class="cookie-actions">
+    <button type="button" class="btn-cookie" data-consent="essential" data-i18n="cookieReject">Essential only</button>
+    <button type="button" class="btn-cookie solid" data-consent="all" data-i18n="cookieAccept">Accept all</button>
+  </div>
+</div>
+</body>
+</html>
