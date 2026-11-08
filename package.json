@@ -1,0 +1,12 @@
+{
+  "name": "halte-cafe",
+  "version": "1.0.0",
+  "description": "Multilingual, interactive café website (static front end).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve -l 5173 .",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}
